@@ -1,0 +1,11 @@
+<div class="nav-container">
+
+    <div class="nav-buttons-container">
+        <div *ngFor="let link of routes" (click)="gotoDetail(link); titulo=link" class="nav-button">
+            <span>{{link}}</span>
+        </div>
+    </div>
+    <h1>{{titulo | titleCase}}</h1>
+</div>
+
+<!--<div *ngFor="let link of routes" (click)="gotoDetail(link)">{{link}}</div>-->
