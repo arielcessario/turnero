@@ -1,3 +1,18 @@
 <div id="monitor-container">
+
+    <select name="" id="envio" (change)="updateBox(boxes.value)" #boxes [(ngModel)]="selected_box">
+        <option value="-1">Seleccione un Box</option>
+        <ng-container *ngFor="let item of items | async">
+            <option *ngIf="!item.checked || item.$key == selected_box" [value]="item.$key">
+                Box nro.: {{item.$key}}
+            </option>
+        </ng-container>
+    </select>
+    <!--<li class="text" *ngFor="let item of items | async">-->
+    <!--<input type="checkbox" [(ngModel)]="item.checked"-->
+    <!--(change)="items.update(item.$key, {'checked': item.checked}); selected_box = item.$key"-->
+    <!--[disabled]="evaluate(item)"/>-->
+    <!--{{item.$key}} {{item.random_id}}-->
+    <!--</li>-->
     <button (click)="proximo()">Próximo</button>
 </div>
