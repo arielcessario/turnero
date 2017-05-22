@@ -37,6 +37,7 @@ export class DoctorComponent implements OnInit {
 
     ngOnInit() {
 
+
     }
 
     updateBox(value) {
